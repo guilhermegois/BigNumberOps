@@ -2,6 +2,17 @@
 
 #include "doubly_linked_list.h"
 
+void startList(Doubly_Linked_List* list){
+	list->first=NULL;
+	list->last=NULL;
+
+}
+int enptyList(Doubly_Linked_List* list) {
+	if(list->first == NULL && list->last == NULL)
+		return 1;
+	return 0;
+}
+
 void insertAtBeginning(Doubly_Linked_List* list, elem_t elem) {
 	Node *newNode = (Node *) malloc(sizeof(Node));
 	newNode->info = elem;
@@ -10,7 +21,10 @@ void insertAtBeginning(Doubly_Linked_List* list, elem_t elem) {
 	list->first = newNode;
 }
 
-void insertAtPrevious(Doubly_Linked_List* list, Node newNode, elem_t elem) {	}
+void insertAtPrevious(Doubly_Linked_List* list, Node newNode, elem_t elem) {
+
+	
+}
 
 void insertAtNext(Doubly_Linked_List* list, Node newNode, elem_t elem) {	}
 
